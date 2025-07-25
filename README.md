@@ -81,9 +81,9 @@ CSS is written inside a `<style>` tag within the `<head>` of an `HTML` document.
 
 ---
 
-## b. CSS Selectors
+# b. CSS Selectors
 
-# CSS Selectors & Styling Guide
+## CSS Selectors & Styling Guide
 
 ## What is a Selector?
 
@@ -201,7 +201,7 @@ This applies only to <p> elements directly inside .elem-2.
 }
 ```
 
-# Specificity Order (Priority)
+## Specificity Order (Priority)
 
 - Universal Selector (\*)
 - Element Selector (section, p, etc.)
@@ -213,3 +213,89 @@ This applies only to <p> elements directly inside .elem-2.
 - !important — Overrides all
 
 ---
+
+# c. colors
+
+## overview
+
+In web development, colors play a vital role in enhancing the visual appeal and user experience of a website. Using HTML and CSS, we can easily apply and customize colors for various elements like text, backgrounds, borders, and more.
+
+## Why Use Colors?
+
+- To create visual hierarchy
+- To improve readability
+- To reflect branding and design consistency
+- To highlight important information
+
+## Where Is It Used?
+
+- Backgrounds (background, background-color)
+- Text content (color)
+- Buttons, borders, headers, footers, and more
+
+## Common Color Formats in CSS
+
+1. **Named Colors**
+   These are predefined color names supported by CSS. You just write the name of the color.
+
+```css
+article {
+  background-color: lightcyan;
+  color: darkcyan;
+}
+```
+
+- Easy to remember
+- Limited to around 140 standard names
+- Common named colors: red, blue, green, black, white, yellow, purple, orange, gray, etc.
+
+2. **Hex Codes (Hexadecimal Color Values)**
+
+Hex codes are 6-digit codes that represent colors in the format:
+`#RRGGBB (R = Red, G = Green, B = Blue)`
+Each pair is a number from 00 to FF (which equals 0–255 in decimal).
+
+```css
+article {
+  background-color: #219ebc;
+  color: #023047;
+  padding: 60px;
+  margin: 20px;
+}
+```
+
+- Precise and widely used
+- Harder to understand at a glance
+
+3. **RGB / RGBA**
+
+RGB stands for Red, Green, Blue – each value ranges from 0 to 255.
+
+```css
+article {
+  background-color: rgb(33, 150, 243);
+  color: rgb(46, 139, 87);
+}
+```
+
+- More flexible than hex codes
+- RGBA adds the Alpha (transparency) value (from 0 = fully transparent to 1 = fully opaque).
+
+```css
+background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+```
+
+4. **HSL / HSLA**
+
+HSL stands for:
+
+- Hue – the color angle on the color wheel (0–360)
+- Saturation – intensity (0% = gray, 100% = full color)
+- Lightness – brightness (0% = black, 100% = white)
+
+```css
+article {
+  background-color: hsl(240, 100%, 50%);
+  color: hsla(240, 100%, 50%, 0.5);
+}
+```
