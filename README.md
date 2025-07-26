@@ -412,3 +412,39 @@ main {
 - Use vw/vh for full-screen responsiveness.
 
 ---
+
+# e. CSS Box Model
+
+## Overview
+
+The **CSS Box Model** is the fundamental layout principle in CSS. Every HTML element is considered a rectangular box made up of four parts: **content, padding, border, and margin**.
+
+## What is the Box Model?
+
+The box model consists of:
+
+1. **Content** – The actual text or image inside the element.
+2. **Padding** – Space between the content and the border.
+3. **Border** – The edge around the padding.
+4. **Margin** – The outermost space between the element and other elements.
+
+The total size of an element includes:
+
+**Total Width = margin + border + padding + content width**
+**Total Height = margin + border + padding + content height**
+
+## What is the `div` Tag?
+
+The `<div>` tag is a **block-level container** used to group HTML elements for styling and layout purposes. It doesn't add any visual effect by default but is very useful with CSS.
+
+In this example:
+
+```html
+<div class="box">BOX</div>
+```
+
+The **div** has a class **box** applied to it, which is styled in **style.css.**
+
+**box-sizing: border-box** ensures that **padding** and **border** are included inside the defined width and height of an element.
+
+---
