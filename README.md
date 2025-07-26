@@ -299,3 +299,116 @@ article {
   color: hsla(240, 100%, 50%, 0.5);
 }
 ```
+
+---
+
+# 3. unitInCss
+
+## Overview
+
+In CSS, units determine how big or small things appear on a webpage — including fonts, spacing, width, height, etc. Different units serve different purposes. This guide explains six commonly used units with examples and why you'd use each one.
+
+## Why Are There Different Units?
+
+Different design needs require different kinds of control:
+
+- Some elements need fixed sizes.
+- Others should scale based on screen size or user settings.
+- Some should be relative to other elements.
+
+## Units Explained
+
+### px (Pixels)
+
+- A fixed unit that does not scale.
+- Great when you want exact control (e.g., borders, small spacing).
+- Not responsive — the size stays the same on all screens.
+
+**Example from code:**
+
+```css
+main {
+  border: 5px solid black;
+  margin: 20px;
+}
+```
+
+### em (Relative to Parent)
+
+- Depends on the font-size of the parent.
+- Useful for scaling font sizes or spacing within components.
+- Can multiply if nested (e.g., 2em inside a 2em = 4x base size).
+
+**Example from code:**
+
+```CSS
+header {
+  font-size: 2em;
+  padding: 1em;
+}
+```
+
+### rem (Relative to Root)
+
+- Based on the root (html) font-size, usually 16px.
+- More predictable than em because it's not affected by nesting.
+- Perfect for headings or base sizes that should be consistent.
+
+**Example from code:**
+
+```css
+h1 {
+  font-size: 3rem;
+}
+```
+
+### % (Percentage)
+
+- Relative to the size of the parent element.
+- Often used for width, height, or padding/margin.
+- Helps create flexible layouts that adapt to parent sizes.
+
+**Example from code:**
+
+```css
+section {
+  width: 80%;
+}
+```
+
+### vw (Viewport Width)
+
+- 1vw = 1% of the browser window's width.
+- Great for full-width sections, responsive containers.
+- Scales with screen size.
+
+**Example from code:**
+
+```css
+main {
+  width: 60vw;
+}
+```
+
+### vh (Viewport Height)
+
+- 1vh = 1% of the browser window's height.
+- Useful for creating full-screen sections or hero banners.
+
+**Example from code:**
+
+```css
+main {
+  height: 90vh;
+}
+```
+
+## summary
+
+- Use rem for consistent font sizes.
+- Use em when you want scaling based on parent.
+- Use px when you need exact control.
+- Use % to size things relative to the container.
+- Use vw/vh for full-screen responsiveness.
+
+---
