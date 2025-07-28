@@ -448,3 +448,44 @@ The **div** has a class **box** applied to it, which is styled in **style.css.**
 **box-sizing: border-box** ensures that **padding** and **border** are included inside the defined width and height of an element.
 
 ---
+
+# f. text and font styling
+
+## Overview
+
+This is a simple webpage with two sections:
+
+- The **first section** demonstrates text-related properties like color, alignment, spacing, and decoration.
+- The **second section** focuses on font-related properties including Google Fonts, font variants, weight, and web-safe fonts.
+
+## Why This?
+
+Text and font styling are core parts of CSS that control how content looks and feels. This example helps you understand how each property works and improves the visual presentation of your web pages.
+
+### Text Styling Used
+
+- **Text color:** Changes the color of text (e.g., blue).
+- **Text alignment:** Aligns text to the left, right, center, or justified.
+- **Text decoration:** Adds underline with custom color, style, and thickness.
+- **Text transform:** Converts text to uppercase.
+- **Text indent:** Indents the first line of text.
+- **Letter spacing:** Adjusts space between letters.
+- **Line height:** Controls vertical space between lines.
+- **Word spacing:** Increases space between words.
+- **Text shadow:** Adds layered colored shadows behind text for a 3D effect.
+
+### Font Styling Used
+
+- **Font family:** Applies different fonts like Tahoma (web-safe) and Raleway (Google Font).
+- **Font style:** Applies italic style.
+- **Font weight:** Makes text bold (e.g., weight 900).
+- **Font variant:** Uses small-caps (uppercase letters in smaller size).
+- **Font size:** Sets font size (e.g., 20px).
+
+### Google Fonts
+
+This project imports the **Raleway** font using `@import`:
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+```
