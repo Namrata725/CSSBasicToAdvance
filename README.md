@@ -489,3 +489,73 @@ This project imports the **Raleway** font using `@import`:
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 ```
+
+---
+
+# f. Display Propertise
+
+## Overview
+
+In HTML, elements have default display behaviors:
+
+- **Block elements** take up the full width available and start on a new line.
+- **Inline elements** flow within a line and only take up as much width as their content.
+- **Inline-block elements** behave like inline elements but allow setting width and height like block elements.
+- **none** elements are invisible and do not take up any space.
+
+### HTML Elements Used
+
+- **Block-level elements:** `<div>`, `<h1>`, `<p>`, `<nav>`, `<ul>`, `<li>`
+- **Inline elements:** `<span>`, `<a>`, `<img>`
+
+### CSS Highlights
+
+```css
+/* Changes a paragraph to behave like inline */
+.inline-P {
+  display: inline;
+}
+
+/* Changes a paragraph to behave like inline */
+.inline-P {
+  display: inline;
+}
+
+/* This hides the second paragraph using display: none */
+.inline-P2 {
+  display: none;
+}
+```
+
+## Display Types
+
+**Block Elements**
+
+- Start on a new line.
+- Take up full width by default.
+- Allow setting width, height, margin, and padding.
+
+**Examples** <div>, <h1>, <p>, <ul>, <nav>
+
+**Inline Elements**
+
+- Do not start on a new line.
+- Only take up as much width as necessary.
+- You cannot set width or height directly.
+- You can set margin and padding.Padding and margin (top/bottom) have no visible effect.
+
+**Examples** <span>, <a>, <img>
+
+**Inline-Block Elements**
+
+- Behave like inline elements (stay in line with text).
+- Allow setting width, height, padding, and margin.
+
+**Examples** any element styled with display: inline-block
+
+**display: none**
+
+- Completely removes the element from rendering.
+- The element will not take any space.
+
+## **Examples** any element styled with display: none

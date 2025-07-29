@@ -1,0 +1,40 @@
+*{
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    width: 50%;
+
+}
+.inline-P{
+    display: inline;
+}
+
+a{
+    width: 50%;
+    display: inline-block; /* to make the width work */
+}
+a{
+   width: 100px; 
+}
+ul{
+    text-align: right;
+    padding: 20px;
+    list-style: none;
+    background-color: black;
+
+}
+ul li{
+    display: inline;
+    
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+.inline-P2{
+display: none; /* this will hide the element */
+}
+
