@@ -535,8 +535,7 @@ In HTML, elements have default display behaviors:
 - Take up full width by default.
 - Allow setting width, height, margin, and padding.
 
-**Examples** <div>, <h1>, <p>, <ul>, <nav>
-
+**examples : div, p, ul, li, h1, h2, h3, h4, h5, h6, nav, a, img**
 **Inline Elements**
 
 - Do not start on a new line.
@@ -544,7 +543,7 @@ In HTML, elements have default display behaviors:
 - You cannot set width or height directly.
 - You can set margin and padding.Padding and margin (top/bottom) have no visible effect.
 
-**Examples** <span>, <a>, <img>
+**examples : span, a, img**
 
 **Inline-Block Elements**
 
