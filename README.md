@@ -557,4 +557,72 @@ In HTML, elements have default display behaviors:
 - Completely removes the element from rendering.
 - The element will not take any space.
 
-## **Examples** any element styled with display: none
+### **Examples** any element styled with display: none
+
+---
+
+# h. css position properties
+
+## Overview
+
+The CSS `position` property specifies how an element is positioned in the document. It affects how the element is placed, whether it scrolls with the page, and what it’s relative to.
+
+This demo visually compares all six types of positioning inside a container using color-coded boxes.
+
+## Position Values Explained
+
+### 1 `static` (default)
+
+- All HTML elements are **static** by default.
+- They appear in the normal document flow.
+- Top, right, bottom, and left values have **no effect**.
+  **Example:** `.darkcyan` box
+
+### 2 `relative`
+
+- The element remains in the document flow.
+- You can shift it using `top`, `left`, `right`, or `bottom`.
+- **Positioning is relative to its original position**, not its parent.
+  **Example:** `.red` box
+
+Only `top` and `left` are applied when all four (top, bottom, right, left) are set. This is because in case of conflicts, browsers prioritize the ones that move the element **away** from its normal flow.
+
+### 3 `absolute`
+
+- Removed from the normal document flow.
+- Positioned **relative to the nearest positioned (non-static) ancestor**.
+- If no such ancestor exists, it is positioned relative to the `<html>` element.
+  **Example:** `.green` box If a box "disappears", it's usually because it moved out of view or got covered due to stacking context.
+
+### 4 `fixed`
+
+- Positioned relative to the **viewport** (the browser window).
+- Stays fixed when the page scrolls.
+- Useful for sticky headers, floating buttons, etc.
+
+  **Examples:**
+
+- `.blue` box (bottom-right corner)
+- `.orange` box (next to it, using `right: 50px`)
+
+### 5 `sticky`
+
+- Behaves like `relative` until it crosses a scroll threshold.
+- Then it becomes `fixed` and sticks to the defined offset (e.g., `top: 50px`).
+- Requires a scrollable container or enough vertical space to work.
+  **Example:** `.purple` box Related to its **scrollable parent**.
+
+## Z-Index
+
+The `z-index` property defines the **stacking order** of elements (which elements appear on top of others).
+
+- Higher `z-index` values appear above lower ones.
+- Only works on elements with `position` set to `relative`, `absolute`, `fixed`, or `sticky`.
+
+  **Example in Code:**
+
+- `.blue` box has `z-index: 1`
+- `.purple` box has `z-index: 5` (appears above `.blue`)
+- `.container` itself has a `z-index: 12` (for context)
+
+---
