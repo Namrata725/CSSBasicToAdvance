@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+
+.float-container{
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow: auto; /* This will add scrollbars only when necessary */
+    
+    
+    
+}
+
+.float-container>p{
+    margin-top: 10px;
+}
+
+
+
+.float-container>.float-left{
+    float: left; /* This will make the image float to the left */
+    padding: 20px;
+    
+
+}
+
+.float-container>.float-right{
+    float: right; 
+
+}
+
+.p2{
+    /* float: left;  /*This will make the paragraph float to the left*/
+    /*float: right; /*This will make the paragraph float to the right */
+    clear:both; /* This will clear any floating elements above it */;
+} 

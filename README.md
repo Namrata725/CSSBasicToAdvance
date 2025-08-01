@@ -626,3 +626,74 @@ The `z-index` property defines the **stacking order** of elements (which element
 - `.container` itself has a `z-index: 12` (for context)
 
 ---
+
+# i. css float, clear and overflow
+
+## Overview
+
+The CSS `float`, `clear`, and `overflow` properties are used to control how elements behave when positioned side-by-side, wrap text around images, or when content exceeds its container.
+
+## Overflow
+
+The `overflow` property manages how content behaves when it exceeds the container’s boundaries.
+
+### Values of `overflow`:
+
+- `visible`  
+  Default. Content spills out of the container visibly.
+
+- `hidden`  
+  Content is clipped and overflow is not visible.
+
+- `scroll`  
+  Adds scrollbars regardless of whether content overflows.
+
+- `auto`  
+  Adds scrollbars only when content overflows.
+
+**Example in code:**
+
+- `.float-container` in `index.html` uses `overflow: auto` to expand and contain floated children.
+- Other values like `hidden`, `scroll`, and `visible` can be tested by uncommenting the lines in `style.css`.
+
+## Float
+
+The `float` property is used to position elements to the left or right, allowing surrounding inline content (like text) to wrap around the floated element.
+
+### Values of `float`:
+
+- `left`  
+  Floats the element to the left side of its container.
+
+- `right`  
+  Floats the element to the right side of its container.
+
+- `none`  
+  Default. Element is not floated and appears in the normal document flow.
+
+- `inherit`  
+  Inherits the float value from its parent element.
+
+  **Examples in code:**
+
+- `.float-left` image floats to the left, allowing text to wrap on the right.
+- `.float-right` image floats to the right, allowing text to wrap on the left.
+- `.box` class in `index2.html` demonstrates floating colored boxes.
+
+## Clear
+
+The `clear` property is used to control the behavior of elements after floated elements. It prevents the element from wrapping around floated siblings.
+
+### Values of `clear`:
+
+- `left`  
+  Prevents the element from sitting next to any left-floated elements.
+
+- `right`  
+  Prevents the element from sitting next to any right-floated elements.
+
+- `both`  
+  Prevents the element from sitting next to both left and right floats.
+
+- `none`  
+  Default. Allows floating elements beside it.

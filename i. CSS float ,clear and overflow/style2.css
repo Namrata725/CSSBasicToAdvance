@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bigbox{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(67, 228, 228);
+    
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: auto
+    /* float: left; floats the boxes to the left */
+    
+}
+
+.b1{
+    background-color: red;
+    /* float: left; This will float the box to the left */
+}
+
+.b2{
+    background: blue;
+    float: left;
+    clear: left;
+}
+
+.b3{
+    background: green;
+    float: left;
+}
+
+.b4{
+    background: yellow;
+    clear: left; /* This will clear the float, so it starts below the floated elements */
+}
