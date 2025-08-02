@@ -767,4 +767,125 @@ Each input field includes:
   @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
   ```
 
-  ***
+---
+
+# k. CSS Flexbox: Container and Item Properties
+
+## Overview
+
+Flexbox is a **one-dimensional layout system** in CSS that allows you to align and distribute space among items inside a container. It simplifies creating flexible and responsive layouts without relying on floats or positioning.
+
+This demo illustrates the **flex container** and **flex item** properties using a set of boxes that adjust their position and size based on different Flexbox rules.
+
+## What is Flexbox?
+
+- **Flexbox** (Flexible Box Layout) is designed to provide **space distribution** and **alignment capabilities** for elements within a container.
+- It operates along two axes:
+  - **Main axis** (horizontal by default)
+  - **Cross axis** (vertical by default)
+- Elements inside a flex container become **flex items**, which can be arranged in various ways.
+
+## Properties of Flex Container
+
+A container becomes a **flex container** by setting:
+
+```css
+display: flex;
+```
+
+### 1. `flex-direction`
+
+Determines the **main axis** (the direction of flex items):
+
+- `row` (default) – items placed left to right
+- `row-reverse` – items placed right to left
+- `column` – items placed top to bottom
+- `column-reverse` – items placed bottom to top
+
+### 2. `flex-wrap`
+
+Controls whether flex items wrap to the next line:
+
+- `nowrap` (default) – all items stay on one line
+- `wrap` – items wrap to the next line
+- `wrap-reverse` – items wrap in reverse order
+
+### 3. `flex-flow`
+
+Shorthand for `flex-direction` and `flex-wrap`.
+
+```css
+flex-flow: row wrap;
+```
+
+### 4. `justify-content`
+
+Aligns items **along the main axis**:
+
+- `flex-start` (default) – items align at the start
+- `flex-end` – items align at the end
+- `center` – items align at the center
+- `space-between` – equal space between items
+- `space-around` – equal space around items
+- `space-evenly` – equal space distributed across
+
+### 5. `align-items`
+
+Aligns items **along the cross axis**:
+
+- `stretch` (default) – items stretch to fill container
+- `flex-start` – items align at the start of the cross axis
+- `flex-end` – items align at the end of the cross axis
+- `center` – items align at the center of the cross axis
+- `baseline` – items align by their text baseline
+
+### 6. `align-content`
+
+Aligns **multiple lines** (when wrapping is enabled):
+
+- `stretch` (default)
+- `flex-start`
+- `flex-end`
+- `center`
+- `space-between`
+- `space-around`
+- `space-evenly`
+
+## Properties of Flex Items (Children)
+
+### 1. `order`
+
+Controls the order of items. Default is `0`. Lower values appear first.
+
+### 2. `flex-grow`
+
+Specifies how much an item should **grow** relative to others.
+
+### 3. `flex-shrink`
+
+Specifies how much an item should **shrink** relative to others.
+
+### 4. `flex-basis`
+
+Defines the **initial size** of a flex item before remaining space is distributed.
+
+### 5. `flex`
+
+Shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`.
+
+```css
+flex: 0 0 200px;
+```
+
+### 6. `align-self`
+
+Overrides `align-items` for a single flex item:
+
+- `auto` (default)
+- `flex-start`
+- `flex-end`
+- `center`
+- `baseline`
+- `stretch`
+
+---
