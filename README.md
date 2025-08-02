@@ -697,3 +697,74 @@ The `clear` property is used to control the behavior of elements after floated e
 
 - `none`  
   Default. Allows floating elements beside it.
+
+---
+
+# j. Sign-Up mini project
+
+## Overview
+
+This project demonstrates a modern, stylish sign-up form using **glassmorphism** design. It uses layout positioning (`absolute`, `relative`, `transform`), input styling, hover effects, and layered circular backgrounds with blur filters for a soft, frosted look.
+
+The layout is responsive to viewport dimensions using `100vw` and `100vh`, and visually enhanced with gradient backgrounds and box shadows.
+
+## Layout
+
+### outer-box
+
+- Covers the entire viewport using `width: 100vw; height: 100vh;`.
+- Has a diagonal background gradient:  
+  `background: linear-gradient(to top left, #3ed8ff, #a8f5ff);`
+
+  ### inner-box
+
+- The main container for the form.
+- Positioned in the vertical center using:
+  ```css
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  ```
+- Applies `backdrop-filter: blur(8px);` for the frosted glass effect.
+- Has padding, rounded corners, and box-shadow for depth.
+
+### Form Sections
+
+- **Header (`.signup-header`)**: Contains a large heading and subtext.
+- **Body (`.signup-body`)**: Contains the form elements and spacing.
+- **Footer (`.signup-footer`)**: Contains a login link for existing users.
+
+## Form Inputs
+
+Each input field includes:
+
+- Full-width styling with padding and border.
+- Rounded corners and spacing.
+- `input[type="submit"]` has a dark background and white text by default.
+- On hover, it changes to light blue (`#3ed8ff`) with dark text.
+
+## Decorative Circles
+
+- Two `div.circle` elements are absolutely positioned for design enhancement.
+- They have:
+  ```css
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #ffffff33, #ffffffff);
+  ```
+
+### Positions:
+
+- `.c1` — top-left of the screen (`top: 100px; left: 40px;`)
+- `.c2` — bottom-right of the screen (`bottom: 200px; right: 50px;`)
+
+## Fonts
+
+- Uses `Lato` and `Raleway` via Google Fonts.
+
+  ```css
+  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+  ```
+
+  ***
