@@ -889,3 +889,173 @@ Overrides `align-items` for a single flex item:
 - `stretch`
 
 ---
+
+# i. grid layout
+
+## Overview
+
+CSS Grid is a **two-dimensional layout system** that allows control over both rows and columns. Unlike Flexbox (which is one-dimensional), Grid is ideal for creating complex layouts like galleries, dashboards, and full-page designs.
+
+## Why Use Grid?
+
+1. Simplifies complex layouts without using floats or positioning hacks.
+2. Allows **precise placement** of elements in rows and columns.
+3. Supports **fractional units (fr)**, **auto-sizing**, and **spanning multiple cells**.
+4. Enables **responsive layouts** with `auto-fit` and `auto-fill`.
+
+## Grid Container Properties
+
+A container becomes a grid when you set:
+
+```css
+display: grid;
+```
+
+### 1. `gap`
+
+- Defines space **between rows and columns** (not inside items).
+- Previously achieved using `grid-row-gap` and `grid-column-gap`.
+- Examples:
+  ```css
+  gap: 10px; /* equal spacing for rows and columns */
+  gap: 10px 20px; /* 10px between rows, 20px between columns */
+  ```
+- Useful for separating items visually without adding margins.
+
+### 2. `grid-template-columns`
+
+- Defines the **number and size of columns**.
+- Supported units:
+
+  - **Fixed units** (`px`): Exact sizes.
+    ```css
+    grid-template-columns: 100px 200px 300px;
+    ```
+  - **Percentages**: Relative to container width.
+    ```css
+    grid-template-columns: 20% 30% 50%;
+    ```
+  - **Fractional units (`fr`)**: Distributes available space.
+    ```css
+    grid-template-columns: 1fr 2fr; /* second column is twice as wide */
+    ```
+  - **Repeat function**: Avoids repetition.
+    ```css
+    grid-template-columns: repeat(3, 1fr);
+    ```
+  - **Auto-fit / Auto-fill**: Creates dynamic grids.
+
+    ```css
+    grid-template-columns: repeat(auto-fill, 300px);
+    ```
+
+    3.  `grid-template-rows`
+
+- Works like `grid-template-columns` but controls **row sizes**.
+- Example:
+
+  ```css
+  grid-template-rows: 200px 80px; /* first row 200px, second row 80px */
+  grid-template-rows: 1fr 2fr; /* second row takes double space */
+  ```
+
+  ### 4. `grid-auto-rows`
+
+- Sets height for **rows automatically generated** (when more items exist than defined rows).
+- Example:
+
+  ```css
+  grid-auto-rows: 150px;
+  ```
+
+  ### 5. `justify-content` (Horizontal alignment of the entire grid)
+
+- Moves the **entire grid horizontally** inside the container.
+- Options:
+
+  - `start` – aligns grid to left.
+  - `end` – aligns grid to right.
+  - `center` – centers grid.
+  - `space-between` – equal space between columns.
+  - `space-around` – equal space around columns.
+  - `space-evenly` – equal space distributed across.
+  - `stretch` (default) – columns stretch to fill container.
+
+  ### 6. `align-content` (Vertical alignment of the entire grid)
+
+- Moves the **entire grid vertically** inside the container.
+- Options mirror `justify-content`.
+
+### 7. `align-items` (Vertical alignment of items within cells)
+
+- Aligns items **within their cells vertically**.
+- Options:
+  - `start` – aligns items to top of cell.
+  - `end` – aligns items to bottom of cell.
+  - `center` – centers items vertically.
+  - `stretch` (default) – stretches items to fill cell height.
+
+## Grid Item (Children) Properties
+
+### 1. `justify-self`
+
+- Controls **horizontal alignment** of a single item within its cell.
+- Options:
+  - `start` – aligns to left.
+  - `end` – aligns to right.
+  - `center` – centers horizontally.
+  - `stretch` (default) – fills entire width.
+
+### 2. `align-self`
+
+- Controls **vertical alignment** of a single item within its cell.
+- Options:
+  - `start` – aligns to top.
+  - `end` – aligns to bottom.
+  - `center` – centers vertically.
+  - `stretch` (default) – fills entire height.
+
+### 3. `grid-column`
+
+- Makes items **span multiple columns**.
+- Examples:
+
+  ```css
+  grid-column: 1 / 3; /* spans from column 1 to 3 */
+  grid-column: 1 / span 2; /* spans 2 columns starting at 1 */
+  grid-column: 1 / -1; /* spans all columns */
+  ```
+
+  ### 4. `grid-row`
+
+- Makes items **span multiple rows**.
+- Examples:
+  ```css
+  grid-row: 1 / 4; /* spans from row 1 to 4 */
+  grid-row: 2 / span 3; /* spans 3 rows starting from row 2 */
+  ```
+
+### 5. `grid-area`
+
+- Shorthand for:
+  ```
+  grid-row-start / grid-column-start / grid-row-end / grid-column-end
+  ```
+- Example:
+  ```css
+  grid-area: 1 / 1 / 3 / 3;
+  ```
+  This places the item starting at **row 1, column 1**, and ending at **row 3, column 3**.
+
+## Notes
+
+- Use `justify-*` for **horizontal control**.
+- Use `align-*` for **vertical control**.
+- Combine both for precise placement of items.
+
+## Related Files
+
+- **index.html** – Demonstrates grid layout with multiple boxes.
+- **style.css** – Defines container and item properties with examples.
+- **index2.html** – Additional grid structure.
+- **style2.css** – Styles for the second example.

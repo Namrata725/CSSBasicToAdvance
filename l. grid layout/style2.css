@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    height: 600px;
+    
+    background-color: black;
+    padding: 90px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:"BOX1 BOX2 BOX2 BOX3"
+                        "BOX1 BOX4 BOX5 BOX6"
+                        "BOX1 BOX7 BOX8 BOX6"
+                        
+                        
+    
+}
+
+
+.box{
+    background-color: white;
+    border: 0.5px solid green;
+    padding: 12px;
+}
+
+#box-1{
+    grid-area: BOX1;
+    background-color: green;
+}
+
+#box-2{
+    grid-area: BOX2;
+    background-color: green;
+}
+
+#box-3{
+    grid-area: BOX3;
+    background-color: red;
+}
+
+#box-4{
+    grid-area: BOX4;
+background-color: yellow;
+}
+
+#box-5{
+    grid-area: BOX5;
+background-color: red;
+}
+
+#box-6{
+    grid-area: BOX6;
+background-color: green;
+}
+
+#box-7{
+    grid-area: BOX7;
+background-color: red;
+}
+
+#box-8{
+    grid-area: BOX8;
+background-color: yellow;
+}
