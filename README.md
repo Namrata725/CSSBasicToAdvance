@@ -1059,3 +1059,101 @@ display: grid;
 - **style.css** – Defines container and item properties with examples.
 - **index2.html** – Additional grid structure.
 - **style2.css** – Styles for the second example.
+
+---
+
+# m.Media Queries
+
+## Overview
+
+**CSS Media Queries** allow you to apply styles conditionally based on device characteristics like **screen size**, **orientation**, and **resolution**.  
+They are the foundation of **responsive web design**, enabling a website to adapt to different devices such as phones, tablets, and desktops without creating separate versions.
+
+## Why Use Media Queries?
+
+1. **Responsive Design** – Ensures your site looks good on all devices.
+2. **Better User Experience** – Content is readable and accessible without zooming or scrolling horizontally.
+3. **Device Adaptation** – Adjusts styles for mobile, tablet, and desktop easily.
+4. **Improved SEO** – Search engines favor mobile-friendly websites.
+5. **Future-Proofing** – Automatically adapts to new devices and screen sizes.
+
+## Syntax
+
+A media query starts with `@media` followed by a condition and a CSS block:
+
+```css
+@media (condition) {
+  /* Styles here */
+}
+```
+
+Multiple conditions can be combined using and, or, and not operators.
+
+### `1. Exact Width`
+
+```css
+@media (width <= 400px) {
+  body {
+    background-color: green;
+  }
+}
+```
+
+Applies styles if the viewport width is 400px or less.
+
+### `2. Orientation`
+
+```css
+@media (orientation: portrait) {
+  body {
+    background-color: orangered;
+  }
+}
+```
+
+Applies styles when the device is in portrait mode.
+
+### `3. Maximum Width`
+
+```css
+@media (max-width: 200px) {
+  body {
+    background-color: goldenrod;
+  }
+}
+```
+
+Applies styles if the viewport is 200px or narrower.
+
+### `4. Minimum Width`
+
+```css
+@media (min-width: 600px) {
+  body {
+    background-color: teal;
+  }
+}
+```
+
+Applies styles if the viewport is 600px or wider.
+
+### `5. Range (Min & Max Width)`
+
+```css
+@media (min-width: 400px) and (max-width: 500px) {
+  body {
+    background-color: brown;
+  }
+}
+```
+
+Applies styles only if the width is between 400px and 500px.
+
+## Notes
+
+- `Default Styles First:` Always define your base styles first, then override them with media queries.
+- `Mobile-First Approach:` Start with small-screen styles and add larger breakpoints using min-width.
+- `Avoid Too Many Breakpoints:` Use only the necessary ones to keep code clean.
+- `Test Across Devices:` Use browser DevTools to simulate different devices.
+
+---
