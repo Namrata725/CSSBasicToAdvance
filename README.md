@@ -1274,3 +1274,110 @@ h2 {
 - This approach simplifies theming and style consistency across the site.
 
 ---
+
+# o.CSS Pseudo-Classes & Pseudo-Elements Demo
+
+## Overview
+
+A **pseudo-class** is a keyword added to selectors that specifies a special state of the selected element.
+
+- **Pseudo-classes** target elements in a special state (e.g., `:hover`, `:first-child`).
+- **Pseudo-elements** style specific parts of an element (e.g., `::first-letter`, `::before`).
+
+### Examples in This Project:
+
+- `:link` — Styles an unvisited link.
+- `:visited` — Styles a visited link.
+- `:hover` — Styles when the mouse is over the element.
+- `:active` — Styles when the element is clicked.
+- `:first-child` — Selects the first child of its parent.
+- `:last-child` — Selects the last child of its parent.
+- `:nth-child(n)` — Selects the nth child (can use formulas like `2n+3`).
+
+## What are CSS Pseudo-Elements?
+
+A **pseudo-element** allows you to style specific parts of an element's content.
+
+### Examples in This Project:
+
+- `::first-letter` — Styles the first letter of an element.
+- `::first-line` — Styles the first line of text.
+- `::selection` — Styles the portion of text the user has highlighted.
+- `::before` — Inserts generated content before an element.
+- `::after` — Inserts generated content after an element.
+
+### CSS Features Used
+
+**1. Link States**
+
+```css
+.primary-button:link {
+  color: green;
+}
+.primary-button:visited {
+  color: red;
+}
+.primary-button:hover {
+  color: orange;
+  background-color: #eee;
+}
+.primary-button:active {
+  color: purple;
+}
+```
+
+- Demonstrates styling links in different states.
+
+**2. Child Selectors**
+
+```css
+ul li:first-child {
+  color: blue;
+}
+.second-li li:last-child {
+  color: purple;
+}
+.second-li li:nth-child(3) {
+  background-color: violet;
+}
+.second-li li:nth-child(2n + 3) {
+  background-color: gray;
+}
+```
+
+- Targets elements based on position within the parent.
+
+**3. Pseudo-Elements for Text Styling**
+
+```css
+main p::first-letter {
+  font-size: 50px;
+}
+main h2::first-letter {
+  font-size: 50px;
+}
+main p::first-line {
+  background-color: violet;
+}
+main p::selection {
+  color: greenyellow;
+  background-color: black;
+}
+```
+
+- Styles specific portions of text like first letters, first lines, and selected text.
+
+**4. Content Insertion**
+
+```css
+h3::before {
+  content: "any, ";
+}
+h3::after {
+  content: " *";
+}
+```
+
+- Adds generated text before and after an element without changing HTML.
+
+---

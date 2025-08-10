@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 40px;
+}
+
+.primary-button{
+    padding: 10px;
+     
+}
+
+.primary-button:link{
+    color: green;
+}
+.primary-button:visited{
+    color: red;
+}
+
+.primary-button:hover{
+color:orange;
+background-color: #eee;
+}
+
+.primary-button:active{
+    color: purple;
+}
+
+ul li:first-child{
+    color: blue;
+}
+
+.second-li li:last-child{
+    color: purple;
+}
+
+.second-li li:nth-child(3){
+    background-color: violet;
+}
+
+/* nth child */
+/* an+b */
+
+.second-li li:nth-child(2n + 3){
+    background-color: gray;
+}
+
+main p::first-letter{
+    font-size: 50px;
+}
+
+main h2::first-letter{
+    font-size: 50px;
+}
+
+main p::first-line{
+    background-color: violet;
+}
+
+main p::selection{
+    color: greenyellow;
+    background-color: black;
+}
+
+/* before and after */
+
+h3::before{
+    content: 'any, ';
+}
+
+h3::after{
+    content: ' *';
+}
