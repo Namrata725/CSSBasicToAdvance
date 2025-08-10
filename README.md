@@ -1157,3 +1157,120 @@ Applies styles only if the width is between 400px and 500px.
 - `Test Across Devices:` Use browser DevTools to simulate different devices.
 
 ---
+
+# n. css variables
+
+## overview
+
+**CSS variables** are entities defined by CSS authors that contain specific values to be reused throughout a stylesheet. They follow a syntax like `--variable-name` and are accessed using the `var()` function. Variables make it easier to maintain and update styles consistently.
+
+## Why Use CSS Custom Properties?
+
+1. **Reusability** — Define a value once and reuse it throughout your styles.
+2. **Maintainability** — Change the value in one place to update the entire site’s theme.
+3. **Theming** — Easily create dark/light modes or different color schemes by overriding variables.
+4. **Dynamic Updates** — Variables can be manipulated by JavaScript or media queries for responsive designs.
+
+---
+
+in our code
+
+- `.container`wraps all content.
+- `.box` elements represent content boxes.
+- `.dark` class on `.box `overrides default colors for dark theme.
+
+---
+
+### CSS Explanation
+
+**Global Variables (:root)**
+
+```css
+:root {
+  --primary-text-color: teal;
+  --secondary-text-color: black;
+  --primary-background-color: #fff;
+  --container-background-color: #eee;
+  --default-margin-padding: 30px;
+}
+```
+
+- Variables defined globally are accessible throughout the document.
+
+**Dark Theme Override (.dark)**
+
+```css
+.dark {
+  --primary-text-color: white;
+  --secondary-text-color: white;
+  --primary-background-color: black;
+  --container-background-color: rgba(0, 0, 0, 0.288);
+}
+```
+
+- Overrides global variables locally for elements with .dark class.
+- Changes text color to white and background to black, creating a dark mode effect.
+
+**Container Styling**
+
+```css
+.container {
+  padding: 40px;
+  background-color: var(--container-background-color);
+  height: 100vh;
+}
+```
+
+- Uses the container background color variable.
+- Adds padding and full viewport height.
+
+**Box Styling**
+
+```css
+.box {
+  padding: var(--default-margin-padding);
+  background-color: var(--primary-background-color);
+  color: var(--secondary-text-color);
+  margin-block: var(--default-margin-padding);
+  border-radius: var(--default-margin-padding);
+}
+```
+
+- Boxes use variables for padding, background, text color, margin, and border-radius.
+
+**Headings Styling**
+
+```css
+h1 {
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+h2 {
+  margin-bottom: var(--default-margin-padding);
+}
+```
+
+- Heading colors and spacing use the custom properties.
+
+**Responsive Design with Media Query**
+
+```css
+@media (max-width: 800px) {
+  .box {
+    --my-var: green;
+  }
+}
+```
+
+- Demonstrates how custom properties can be overridden inside a media query for responsive behavior.
+- Although --my-var is declared but not used in this example, it shows the concept of dynamically changing variables at different viewport widths.
+
+## Notes
+
+- Custom properties cascade and can be overridden locally.
+- Variables can be used anywhere a CSS property accepts values (colors, sizes, spacing).
+- Use media queries to adjust variables for responsive and adaptive designs.
+- This approach simplifies theming and style consistency across the site.
+
+---
