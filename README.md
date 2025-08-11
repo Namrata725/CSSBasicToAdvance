@@ -1440,3 +1440,45 @@ The **`transform`** property in CSS allows you to visually manipulate an element
 ```
 
 ---
+
+# q. css animation
+
+## Overview
+
+CSS transitions allow you to change property values smoothly over a given duration. Instead of properties changing abruptly, transitions provide gradual animations, improving user experience and visual appeal.
+
+A transition in CSS occurs when a CSS property changes from one value to another over time. This can be triggered by events like hover, focus, active states, or dynamically via JavaScript.
+
+## Transition Properties
+
+1. **transition-delay**
+
+   - Time to wait before the transition starts.
+   - Example: `transition-delay: 0.5s;`
+   - Default: `0s`
+
+2. **transition-duration**
+
+   - How long the transition takes to complete.
+   - Example: `transition-duration: 2s;`
+   - Default: `0s`
+
+3. **transition-property**
+
+   - Specifies which CSS property to apply the transition to.
+   - Example: `transition-property: transform;`
+   - Default: `all`
+
+4. **transition-timing-function**
+   - Defines how the intermediate values are calculated.
+   - Example: `transition-timing-function: ease;`
+   - Default: `ease`
+
+## Common Timing Functions
+
+- **ease** – Slow start, fast middle, slow end
+- **ease-in** – Slow start
+- **ease-out** – Slow end
+- **ease-in-out** – Slow start and end
+- **linear** – Constant speed
+- **cubic-bezier(n,n,n,n)** – Custom easing curve
