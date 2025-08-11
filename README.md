@@ -1381,3 +1381,62 @@ h3::after {
 - Adds generated text before and after an element without changing HTML.
 
 ---
+
+# p. # CSS `transform` Property
+
+## Overview
+
+The **`transform`** property in CSS allows you to visually manipulate an element by scaling, skewing, rotating, or translating it in 2D or 3D space without affecting the document flow.
+
+## Common Transform Functions
+
+- **scale()** → Changes the size of the element. Default value is `1` (original size).
+- **rotate()** → Rotates the element by a given angle. Default value is `0deg` (no rotation).
+- **skew()** → Skews (distorts) the element along the X and/or Y axis. Default value is `0deg`.
+- **translate()** → Moves the element from its original position along X and/or Y axis.
+
+### Supported Values:
+
+- Keywords: `left`, `center`, `right`, `top`, `bottom`
+- Length values (px, %, etc.)
+- Default: `50% 50%` (center of the element)
+- Syntax: `transform-origin: x-axis y-axis;`
+
+## Example Code
+
+### HTML
+
+```html
+<div class="container">
+  <div class="box">box</div>
+</div>
+```
+
+### CSS
+
+```css
+.container {
+  height: 400px;
+  width: 400px;
+  background: teal;
+  margin: 80px auto;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  transition: 0.5s ease;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+```
+
+---
