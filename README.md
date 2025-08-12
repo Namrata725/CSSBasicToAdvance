@@ -1482,3 +1482,40 @@ A transition in CSS occurs when a CSS property changes from one value to another
 - **ease-in-out** – Slow start and end
 - **linear** – Constant speed
 - **cubic-bezier(n,n,n,n)** – Custom easing curve
+
+---
+
+# r.CSS Keyframes Animation
+
+## Overview: What are Keyframes in CSS?
+
+In CSS, **keyframes** define stages of an animation sequence by specifying styles at specific points in time.
+They allow elements to transition smoothly between styles, making web pages more dynamic and interactive.
+
+The `@keyframes` rule specifies the animation code, defining what should happen at various stages of the animation.
+You can use percentages (`0%` to `100%`) or keywords (`from` and `to`) to indicate when style changes occur.
+
+## Why Keyframes Animations are Important?
+
+- **Better Visual Experience**: Animations grab user attention and make the website feel alive.
+- **Highlight Interactions**: Can be used to guide the user’s eye to important content.
+- **Creative Freedom**: Enables complex movements beyond simple transitions.
+
+## CSS Animation Properties
+
+| Property                    | Description                                                                                          | Example                                |
+| --------------------------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| `animation-name`            | The name of the animation to apply (matches the `@keyframes` name).                                  | `animation-name: orbit;`               |
+| `animation-duration`        | How long one cycle of the animation takes.                                                           | `animation-duration: 2s;`              |
+| `animation-delay`           | Time before the animation starts.                                                                    | `animation-delay: 1s;`                 |
+| `animation-iteration-count` | Number of times the animation repeats (`infinite` for endless).                                      | `animation-iteration-count: infinite;` |
+| `animation-direction`       | Direction in which the animation plays (`normal`, `reverse`, `alternate`, `alternate-reverse`).      | `animation-direction: alternate;`      |
+| `animation-timing-function` | How the animation progresses over time (`linear`, `ease`, `ease-in`, etc.).                          | `animation-timing-function: linear;`   |
+| `animation-fill-mode`       | Defines how styles are applied before/after the animation (`none`, `forwards`, `backwards`, `both`). | `animation-fill-mode: forwards;`       |
+
+## Summary
+
+CSS keyframes animations allow you to define complex sequences of visual changes.
+By combining multiple animation properties with `@keyframes`, you can create engaging and visually appealing user interfaces.
+
+---

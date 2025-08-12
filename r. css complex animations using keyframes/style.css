@@ -1,0 +1,74 @@
+body{
+    background-color: teal;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conatiner{
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    animation: orbit 2s linear infinite;
+    border-radius: 50%;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    /* transition: 1s ease; */
+    /* animation-name: circle; */
+    animation-duration: 10s;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    animation-direction: alternate;
+    animation-direction:alternate-reverse;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    animation-timing-function: linear;
+    /* animation-name: slide-in; */
+    border-radius: 50%;
+    /* animation-fill-mode:forwards ; */
+}
+
+@keyframes orbit{
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    
+    }
+}
+
+@keyframes slide-in{
+    0%{
+        transform: translate(-400px);
+    }
+
+    100%{
+        transform: translate(200px);
+    }
+}
+
+@keyframes circle{
+    0%{
+transform: translate(0,0);
+    }
+
+    25%{
+transform: translate(200px ,0);
+    }
+
+    50%{
+transform: translate(200px ,200px);
+    }
+
+    75%{
+transform: translate(0,200px);
+    }
+}
